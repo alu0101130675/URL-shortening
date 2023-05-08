@@ -4,8 +4,8 @@ import { SocialMedia } from "./SocialMedia"
 export const Footer = () => {
   return(
     <footer className="bg-black text-white">
-      <div className="flex w-5/6 justify-between m-auto py-12">
-        <div className="">
+      <div className="flex w-5/6 items-center sm:items-start flex-col sm:flex-row sm:justify-between m-auto py-12">
+        <div className="mb-10 sm:mb-0">
           <Image 
             alt="logo"
             src='/whiteLogo.svg'
@@ -13,8 +13,8 @@ export const Footer = () => {
             height={60}
           />
         </div> 
-        <div className="flex gap-12">
-          <LinkList 
+        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-12 text-center sm:text-left">
+        <LinkList 
             links={['Links Shortering','Branded Links', 'Analytics']}
             title="Features"
           />     

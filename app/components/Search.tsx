@@ -20,18 +20,23 @@ export const Search = () => {
     ))
   }
   return(
-    <div className="w-3/4">
-      <form onSubmit={handleShorten}>
-        <div className="bg-shortenBgDeskopt bg-indigo-950 rounded flex justify-center mt-12 p-6 gap-5">
+    <div className="bg-gradient-to-b from-white from-[35px] to-gray-100 to-0%">
+      <div className="w-5/6 m-auto">
+      <form className="w-full sm:w-3/4" onSubmit={handleShorten}>
+        <div className="w- bg-shortenBgDeskopt bg-indigo-950 rounded-xl sm:rounded flex sm:flex-row flex-col justify-center mt-12 p-7 gap-5">
           <input
             name="url"
             placeholder='shorten a link here' 
             className="flex-1 rounded p-2" 
             type="text" />
-          <Button action={()=>{}} content="Shorten it" backgroundFlag></Button>
+            <div>
+            <Button width={'full'} content="Shorten it" backgroundFlag></Button>
+            </div>
         </div>      
       </form>
       <Result shortenUrl={shortenUrl}/>
     </div>
+    </div>
+
   )
 }

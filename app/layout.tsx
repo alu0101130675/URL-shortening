@@ -4,7 +4,7 @@ import './globals.css'
 import { Inter,Poppins } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
-const poppins = Poppins({ weight:['700','100','200'], subsets: ['latin'] })
+const poppins = Poppins({ weight:['700','100','200','400','300','500','600'], subsets: ['latin'] })
 
 export const metadata = {
   title: 'url shorter',

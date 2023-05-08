@@ -9,13 +9,11 @@ interface TextImageInterface {
 }
 export const TextImage:React.FC<TextImageInterface> = ({imageSrc,mainText,secondaryText,alt}) => {
   return(
-    <div className="flex flex-row m-auto gap-32 mt-9 w-5/6">
-    <section className="flex flex-col justify-center gap-4 flex-1">
-      <h1 className="text-5xl">{mainText}</h1>
-      <p className="text-gray-400">{secondaryText}</p>
-      <div className="w-2/3">
+    <div className="flex flex-col-reverse sm:flex-row m-auto gap-12 sm:gap-32 mt-9 w-5/6">
+    <section className="flex flex-col justify-center items-center gap-4 flex-1">
+      <h1 className="text-5xl text-center sm:text-left">{mainText}</h1>
+      <p className="text-gray-400 text-center sm:text-left">{secondaryText}</p>
       <Button content="Get started" backgroundFlag />        
-      </div>
     </section>
     <Image
     alt={alt}
@@ -23,7 +21,6 @@ export const TextImage:React.FC<TextImageInterface> = ({imageSrc,mainText,second
     height={100}
     width={500}
     />
-
     </div>
 
   )
