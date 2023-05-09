@@ -62,12 +62,15 @@ export const Search = () => {
 }
 
 function getShortenUrls() {
-  const urls = window.localStorage.getItem('urls') ?? ''
-  const urlsArray = urls.split(',')
-  let initialValue = []
-  for (let i = 0; i < urlsArray.length - 1; i=i+2) {
-    initialValue.push([urlsArray[i], urlsArray[i + 1]])
+  if (typeof window !== 'undefined') {
+    const urls = window.localStorage.getItem('urls') ?? ''
+    const urlsArray = urls.split(',')
+    let initialValue = []
+    for (let i = 0; i < urlsArray.length - 1; i=i+2) {
+      initialValue.push([urlsArray[i], urlsArray[i + 1]])
+    }
+    console.log(initialValue)
+    return initialValue
   }
-  console.log(initialValue)
-  return initialValue
+
 }
