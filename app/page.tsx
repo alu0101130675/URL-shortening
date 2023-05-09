@@ -18,7 +18,7 @@ export default function Home() {
           <p className=' bg-slate-100 text-center text-gray-400 w-1/2 m-auto mt-2'>
             Track how your links are performing across the web with our advanced statistics dashboard
           </p>
-          <div className='relative flex flex-col md:flex-row w-5/6 m-auto gap-6 mt-20 mb-20 items-center'>
+          <div className='relative flex flex-col md:flex-row w-5/6 m-auto gap-6 mt-20 pb-20 items-center'>
             <Card 
               image='/icon-brand-recognition.svg' 
               text=
