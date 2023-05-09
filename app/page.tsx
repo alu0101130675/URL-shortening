@@ -44,7 +44,7 @@ export default function Home() {
           </div>  
               <div className=' bg-boostBgDeskopt bg-indigo-950  text-center p-12 text-white'>
             <h2 className='text-3xl mb-5'>Boost your links today</h2>
-            <Button content='Get started' backgroundFlag />
+            <Button rounded='full' content='Get started' backgroundFlag />
         </div>    
        </div>
     </main>

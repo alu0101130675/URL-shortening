@@ -22,13 +22,13 @@ export const Navbar = () => {
         <input className="peer" hidden type="checkbox"/>
         <div className="hidden md:flex peer-checked:flex items-center  flex-1  flex-col md:flex-row text-right ">
       <section className="flex items-center md:justify-start flex-col flex-1 md:flex-row gap-6 text-gray-400">
-      <Link href={'#'}>Features</Link>
-      <Link href={'#'}>Pricing</Link>
-      <Link href={'#'}>Resources</Link>
+      <Link className="hover:text-black" href={'#'}>Features</Link>
+      <Link className="hover:text-black" href={'#'}>Pricing</Link>
+      <Link className="hover:text-black" href={'#'}>Resources</Link>
       </section>
       <section className="flex w-fit flex-col md:flex-row gap-4 justify-end">
-      <Button content='Login'/>
-      <Button content='Sign up' backgroundFlag={true}/>
+      <Button rounded="full" content='Login'/>
+      <Button rounded="full" content='Sign up' backgroundFlag={true}/>
       </section>
       </div>
       </label>

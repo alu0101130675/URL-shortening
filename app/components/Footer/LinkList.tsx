@@ -11,7 +11,7 @@ export const LinkList:React.FC<LinkListInterface> = ({links,title}) => {
       <ul>
         {links.map(link=> 
           <li key={link}>
-            <Link className="font-light" href={'#'}>{link}</Link> 
+            <Link className="font-light hover:text-cyan-400" href={'#'}>{link}</Link> 
           </li>)
         }
       </ul>    
