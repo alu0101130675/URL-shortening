@@ -38,7 +38,7 @@ export const Search = () => {
   return(
     <div className="bg-gradient-to-b from-white from-[35px] to-gray-100 to-0%">
       <div className="w-5/6 m-auto">
-      <form className="w-full sm:w-3/4" onSubmit={handleShorten}>
+      <form className="w-full md:w-3/4" onSubmit={handleShorten}>
         <div className="relative bg-shortenBgDeskopt bg-indigo-950 rounded-xl md:rounded flex md:flex-row flex-col justify-center mt-12 p-7 gap-5">
           <input
             name="url"

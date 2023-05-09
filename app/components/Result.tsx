@@ -21,12 +21,12 @@ export const Result:React.FC<ResultInterface> = ({shortenUrl}) => {
       {shortenUrl.map(url => {
       return (
         <div key={url[1]} className="flex justify-between p-3 mt-2 bg-white
-    rounded-2xl shadow-xl items-center w-3/4 gap-4
+    rounded-2xl shadow-xl items-center w-full md:w-3/4 gap-4
      ">
-      <p className="flex-1">
+      <p className="hidden md:block flex-1">
       {url[0]}
       </p>
-      <div className="w- flex gap-4 items-center flex-1 justify-end">
+      <div className="flex gap-4 items-center flex-1 justify-between md:justify-end">
       <a
       className="text-teal-400"
       target="_blank"

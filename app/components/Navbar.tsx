@@ -15,7 +15,7 @@ export const Navbar = () => {
       height={80}
       />
       </div>
-       <label className="flex flex-1 flex-col md:flex-row justify-between  items-end text-right">
+       <label className="flex flex-1 flex-col md:flex-row justify-between items-end text-right cursor-pointer">
         <div className="md:hidden">
         <HamburgerSvg/>
         </div>
