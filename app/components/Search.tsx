@@ -29,7 +29,9 @@ export const Search = () => {
       (data :ApiReponse) => {
         setError('')
         const newUrls = [...shortenUrl, [url as string,data.result.short_link]]
-        window.localStorage.setItem('urls', newUrls.toString())
+        if (typeof window !== "undefined") {
+          window.localStorage.setItem('urls', newUrls.toString())
+        }
         setShortenUrl(newUrls)
         console.log(shortenUrl)
       }
