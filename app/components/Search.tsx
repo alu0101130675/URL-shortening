@@ -72,5 +72,5 @@ function getShortenUrls() {
     console.log(initialValue)
     return initialValue
   }
-
+  return []
 }
