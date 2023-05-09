@@ -33,7 +33,7 @@ export const Result:React.FC<ResultInterface> = ({shortenUrl}) => {
       href={`https://${shortenUrl}`}>
         {url[1]}
         </a>
-        <Button width={'1/3'} rounded="lg" value={url[1]} backgroundFlag content="Copy" action={handleCopy}/>
+        <Button width={'1/3'} rounded="xl" value={url[1]} backgroundFlag content="Copy" action={handleCopy}/>
       </div>   
     </div>
       )

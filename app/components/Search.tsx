@@ -49,7 +49,7 @@ export const Search = () => {
             type="text"
              />
             <div>
-            <Button width="full" rounded="lg" content="Shorten it" backgroundFlag></Button>
+            <Button width="full" rounded="xl" content="Shorten it" backgroundFlag></Button>
             </div>
             {error && <p className="absolute top-3/4 left-7 text-red-400 font-normal italic z-10">{error}</p>}
         </div>      
