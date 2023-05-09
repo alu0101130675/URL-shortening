@@ -1,11 +1,11 @@
 'use client'
-import React, {useState } from "react"
+import React, {useEffect, useState } from "react"
 import { Button } from "./Button"
 import { ApiReponse } from "@/types"
 import { Result } from "./Result"
 export const Search = () => {
-  const initialValue = getShortenUrls()
-  const [shortenUrl,setShortenUrl] = useState<string[][]>(initialValue)
+  const [shortenUrl,setShortenUrl] = useState<string[][]>([])
+  useEffect(()=>{setShortenUrl(getShortenUrls())},[])
   const[error,setError] = useState<string>()
   const handleShorten = (event:React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -54,7 +54,7 @@ export const Search = () => {
             {error && <p className="absolute top-3/4 left-7 text-red-400 font-normal italic z-10">{error}</p>}
         </div>      
       </form>
-      <Result shortenUrl={shortenUrl}/>
+      {shortenUrl && <Result shortenUrl={shortenUrl}/>}
     </div>
     </div>
 
@@ -62,7 +62,6 @@ export const Search = () => {
 }
 
 function getShortenUrls() {
-  if (typeof window !== 'undefined') {
     const urls = window.localStorage.getItem('urls') ?? ''
     const urlsArray = urls.split(',')
     let initialValue = []
@@ -71,6 +70,4 @@ function getShortenUrls() {
     }
     console.log(initialValue)
     return initialValue
-  }
-  return []
 }
